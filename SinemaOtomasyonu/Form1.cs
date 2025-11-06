@@ -3,6 +3,8 @@ using SinemaOtomasyonu.DataAccess.Services;
 using SinemaOtomasyonu.Entities.Models;
 using SinemaOtomasyonu.UI;
 using SinemaOtomasyonu.UI.Forms;
+using SinemaOtomasyonu.UI.Forms.MusteriForms;
+using SinemaOtomasyonu.UI.Forms.RezervasyonForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -57,6 +59,50 @@ namespace SinemaOtomasyonu
             FormFilmSil form = new FormFilmSil();
             form.MdiParent = this;
             form.Show();
+        }
+
+        private void btnMusterilerListele_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FormMusteriListesi form = new FormMusteriListesi();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void btnMusterilerEkle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FormMusteriEkle form = new FormMusteriEkle();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void btnMusterilerDuzenle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FormMusteriGuncelle form = new FormMusteriGuncelle();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void btnMusterilerSil_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FormMusteriSil form = new FormMusteriSil();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void btnKoltuklariGoster_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FormKoltuklar form = new FormKoltuklar();
+            form.MdiParent = this;
+            form.Show();
+
+        }
+
+        private void btnRezervasyonYap_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FormRezervasyon form = new FormRezervasyon();
+            form.MdiParent = this;
+            form.Show();
+
         }
     }
 }

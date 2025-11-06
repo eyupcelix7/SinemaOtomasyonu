@@ -38,12 +38,12 @@
             barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
-            barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
-            barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
-            barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
-            barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
-            barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
-            barButtonItem13 = new DevExpress.XtraBars.BarButtonItem();
+            btnMusterilerListele = new DevExpress.XtraBars.BarButtonItem();
+            btnMusterilerEkle = new DevExpress.XtraBars.BarButtonItem();
+            btnMusterilerSil = new DevExpress.XtraBars.BarButtonItem();
+            btnMusterilerDuzenle = new DevExpress.XtraBars.BarButtonItem();
+            btnKoltuklariGoster = new DevExpress.XtraBars.BarButtonItem();
+            btnRezervasyonYap = new DevExpress.XtraBars.BarButtonItem();
             ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -60,7 +60,7 @@
             // ribbonControl1
             // 
             ribbonControl1.ExpandCollapseItem.Id = 0;
-            ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] { ribbonControl1.ExpandCollapseItem, btnFilmListele, btnFilmEkle, btnFilmDuzenle, btnFilmSil, barButtonItem5, barButtonItem6, barButtonItem7, barButtonItem8, barButtonItem9, barButtonItem10, barButtonItem11, barButtonItem12, barButtonItem13 });
+            ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] { ribbonControl1.ExpandCollapseItem, btnFilmListele, btnFilmEkle, btnFilmDuzenle, btnFilmSil, barButtonItem5, barButtonItem6, barButtonItem7, btnMusterilerListele, btnMusterilerEkle, btnMusterilerSil, btnMusterilerDuzenle, btnKoltuklariGoster, btnRezervasyonYap });
             ribbonControl1.Location = new System.Drawing.Point(0, 0);
             ribbonControl1.MaxItemId = 14;
             ribbonControl1.Name = "ribbonControl1";
@@ -101,8 +101,8 @@
             // 
             btnFilmSil.Caption = "SİL";
             btnFilmSil.Id = 4;
-            btnFilmSil.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("barButtonItem4.ImageOptions.Image");
-            btnFilmSil.ImageOptions.LargeImage = (System.Drawing.Image)resources.GetObject("barButtonItem4.ImageOptions.LargeImage");
+            btnFilmSil.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("btnFilmSil.ImageOptions.Image");
+            btnFilmSil.ImageOptions.LargeImage = (System.Drawing.Image)resources.GetObject("btnFilmSil.ImageOptions.LargeImage");
             btnFilmSil.LargeWidth = 80;
             btnFilmSil.Name = "btnFilmSil";
             btnFilmSil.ItemClick += btnFilmSil_ItemClick;
@@ -132,52 +132,59 @@
             barButtonItem7.LargeWidth = 80;
             barButtonItem7.Name = "barButtonItem7";
             // 
-            // barButtonItem8
+            // btnMusterilerListele
             // 
-            barButtonItem8.Caption = "LİSTELE";
-            barButtonItem8.Id = 8;
-            barButtonItem8.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("barButtonItem8.ImageOptions.SvgImage");
-            barButtonItem8.LargeWidth = 80;
-            barButtonItem8.Name = "barButtonItem8";
+            btnMusterilerListele.Caption = "LİSTELE";
+            btnMusterilerListele.Id = 8;
+            btnMusterilerListele.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnMusterilerListele.ImageOptions.SvgImage");
+            btnMusterilerListele.LargeWidth = 80;
+            btnMusterilerListele.Name = "btnMusterilerListele";
+            btnMusterilerListele.ItemClick += btnMusterilerListele_ItemClick;
             // 
-            // barButtonItem9
+            // btnMusterilerEkle
             // 
-            barButtonItem9.Caption = "EKLE";
-            barButtonItem9.Id = 9;
-            barButtonItem9.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("barButtonItem9.ImageOptions.SvgImage");
-            barButtonItem9.LargeWidth = 80;
-            barButtonItem9.Name = "barButtonItem9";
+            btnMusterilerEkle.Caption = "EKLE";
+            btnMusterilerEkle.Id = 9;
+            btnMusterilerEkle.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnMusterilerEkle.ImageOptions.SvgImage");
+            btnMusterilerEkle.LargeWidth = 80;
+            btnMusterilerEkle.Name = "btnMusterilerEkle";
+            btnMusterilerEkle.ItemClick += btnMusterilerEkle_ItemClick;
             // 
-            // barButtonItem10
+            // btnMusterilerSil
             // 
-            barButtonItem10.Caption = "SİL";
-            barButtonItem10.Id = 10;
-            barButtonItem10.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("barButtonItem10.ImageOptions.SvgImage");
-            barButtonItem10.LargeWidth = 80;
-            barButtonItem10.Name = "barButtonItem10";
+            btnMusterilerSil.Caption = "SİL";
+            btnMusterilerSil.Id = 10;
+            btnMusterilerSil.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnMusterilerSil.ImageOptions.SvgImage");
+            btnMusterilerSil.LargeWidth = 80;
+            btnMusterilerSil.Name = "btnMusterilerSil";
+            btnMusterilerSil.ItemClick += btnMusterilerSil_ItemClick;
             // 
-            // barButtonItem11
+            // btnMusterilerDuzenle
             // 
-            barButtonItem11.Caption = "DÜZENLE";
-            barButtonItem11.Id = 11;
-            barButtonItem11.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("barButtonItem11.ImageOptions.SvgImage");
-            barButtonItem11.Name = "barButtonItem11";
+            btnMusterilerDuzenle.Caption = "DÜZENLE";
+            btnMusterilerDuzenle.Id = 11;
+            btnMusterilerDuzenle.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnMusterilerDuzenle.ImageOptions.SvgImage");
+            btnMusterilerDuzenle.LargeWidth = 80;
+            btnMusterilerDuzenle.Name = "btnMusterilerDuzenle";
+            btnMusterilerDuzenle.ItemClick += btnMusterilerDuzenle_ItemClick;
             // 
-            // barButtonItem12
+            // btnKoltuklariGoster
             // 
-            barButtonItem12.Caption = "KOLTUKLARI GÖSTER";
-            barButtonItem12.Id = 12;
-            barButtonItem12.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("barButtonItem12.ImageOptions.SvgImage");
-            barButtonItem12.LargeWidth = 80;
-            barButtonItem12.Name = "barButtonItem12";
+            btnKoltuklariGoster.Caption = "KOLTUKLARI GÖSTER";
+            btnKoltuklariGoster.Id = 12;
+            btnKoltuklariGoster.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnKoltuklariGoster.ImageOptions.SvgImage");
+            btnKoltuklariGoster.LargeWidth = 80;
+            btnKoltuklariGoster.Name = "btnKoltuklariGoster";
+            btnKoltuklariGoster.ItemClick += btnKoltuklariGoster_ItemClick;
             // 
-            // barButtonItem13
+            // btnRezervasyonYap
             // 
-            barButtonItem13.Caption = "REZERVASYON YAP";
-            barButtonItem13.Id = 13;
-            barButtonItem13.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("barButtonItem13.ImageOptions.SvgImage");
-            barButtonItem13.LargeWidth = 80;
-            barButtonItem13.Name = "barButtonItem13";
+            btnRezervasyonYap.Caption = "REZERVASYON YAP";
+            btnRezervasyonYap.Id = 13;
+            btnRezervasyonYap.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("barButtonItem13.ImageOptions.SvgImage");
+            btnRezervasyonYap.LargeWidth = 80;
+            btnRezervasyonYap.Name = "btnRezervasyonYap";
+            btnRezervasyonYap.ItemClick += btnRezervasyonYap_ItemClick;
             // 
             // ribbonPage1
             // 
@@ -219,10 +226,10 @@
             // 
             // ribbonPageGroup2
             // 
-            ribbonPageGroup2.ItemLinks.Add(barButtonItem8);
-            ribbonPageGroup2.ItemLinks.Add(barButtonItem9);
-            ribbonPageGroup2.ItemLinks.Add(barButtonItem11);
-            ribbonPageGroup2.ItemLinks.Add(barButtonItem10);
+            ribbonPageGroup2.ItemLinks.Add(btnMusterilerListele);
+            ribbonPageGroup2.ItemLinks.Add(btnMusterilerEkle);
+            ribbonPageGroup2.ItemLinks.Add(btnMusterilerDuzenle);
+            ribbonPageGroup2.ItemLinks.Add(btnMusterilerSil);
             ribbonPageGroup2.Name = "ribbonPageGroup2";
             ribbonPageGroup2.Text = "MÜŞTERİLER MENÜSÜ";
             // 
@@ -235,8 +242,8 @@
             // 
             // ribbonPageGroup3
             // 
-            ribbonPageGroup3.ItemLinks.Add(barButtonItem12);
-            ribbonPageGroup3.ItemLinks.Add(barButtonItem13);
+            ribbonPageGroup3.ItemLinks.Add(btnKoltuklariGoster);
+            ribbonPageGroup3.ItemLinks.Add(btnRezervasyonYap);
             ribbonPageGroup3.Name = "ribbonPageGroup3";
             ribbonPageGroup3.Text = "REZERVASYON MENÜSÜ";
             // 
@@ -277,12 +284,12 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem7;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem8;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem9;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem10;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem11;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem12;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem13;
+        private DevExpress.XtraBars.BarButtonItem btnMusterilerListele;
+        private DevExpress.XtraBars.BarButtonItem btnMusterilerEkle;
+        private DevExpress.XtraBars.BarButtonItem btnMusterilerSil;
+        private DevExpress.XtraBars.BarButtonItem btnMusterilerDuzenle;
+        private DevExpress.XtraBars.BarButtonItem btnKoltuklariGoster;
+        private DevExpress.XtraBars.BarButtonItem btnRezervasyonYap;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage4;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
