@@ -38,6 +38,8 @@
             lblMusteriTelefon = new DevExpress.XtraEditors.LabelControl();
             lblMusteriSoyadi = new DevExpress.XtraEditors.LabelControl();
             lblMusteriAdi = new DevExpress.XtraEditors.LabelControl();
+            cboMusteriSeciniz = new System.Windows.Forms.ComboBox();
+            lblMusteriSeciniz = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)txtEmail.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)txtTelefonNumarasi.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)txtMusteriSoyadi.Properties).BeginInit();
@@ -46,17 +48,18 @@
             // 
             // txtEmail
             // 
-            txtEmail.Location = new System.Drawing.Point(149, 110);
+            txtEmail.Location = new System.Drawing.Point(149, 145);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new System.Drawing.Size(125, 20);
             txtEmail.TabIndex = 30;
             // 
             // txtTelefonNumarasi
             // 
-            txtTelefonNumarasi.Location = new System.Drawing.Point(149, 78);
+            txtTelefonNumarasi.Location = new System.Drawing.Point(149, 113);
             txtTelefonNumarasi.Name = "txtTelefonNumarasi";
-            txtTelefonNumarasi.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
-            txtTelefonNumarasi.Properties.MaskSettings.Set("mask", "(999) 999 99 99");
+            txtTelefonNumarasi.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegularMaskManager));
+            txtTelefonNumarasi.Properties.MaskSettings.Set("mask", "(\\d?\\d?\\d?) \\d\\d\\d-\\d\\d-\\d\\d");
+            txtTelefonNumarasi.Properties.MaskSettings.Set("MaskManagerSignature", "ignoreMaskBlank=True");
             txtTelefonNumarasi.Size = new System.Drawing.Size(125, 20);
             txtTelefonNumarasi.TabIndex = 29;
             // 
@@ -65,22 +68,23 @@
             btnKaydet.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 162);
             btnKaydet.Appearance.Options.UseFont = true;
             btnKaydet.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnKaydet.ImageOptions.SvgImage");
-            btnKaydet.Location = new System.Drawing.Point(12, 150);
+            btnKaydet.Location = new System.Drawing.Point(12, 185);
             btnKaydet.Name = "btnKaydet";
             btnKaydet.Size = new System.Drawing.Size(262, 36);
             btnKaydet.TabIndex = 28;
             btnKaydet.Text = "Kaydet";
+            btnKaydet.Click += btnKaydet_Click;
             // 
             // txtMusteriSoyadi
             // 
-            txtMusteriSoyadi.Location = new System.Drawing.Point(149, 46);
+            txtMusteriSoyadi.Location = new System.Drawing.Point(149, 81);
             txtMusteriSoyadi.Name = "txtMusteriSoyadi";
             txtMusteriSoyadi.Size = new System.Drawing.Size(125, 20);
             txtMusteriSoyadi.TabIndex = 27;
             // 
             // txtMusteriAdi
             // 
-            txtMusteriAdi.Location = new System.Drawing.Point(149, 14);
+            txtMusteriAdi.Location = new System.Drawing.Point(149, 49);
             txtMusteriAdi.Name = "txtMusteriAdi";
             txtMusteriAdi.Size = new System.Drawing.Size(125, 20);
             txtMusteriAdi.TabIndex = 26;
@@ -89,7 +93,7 @@
             // 
             lblMusteriEmail.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 162);
             lblMusteriEmail.Appearance.Options.UseFont = true;
-            lblMusteriEmail.Location = new System.Drawing.Point(12, 108);
+            lblMusteriEmail.Location = new System.Drawing.Point(12, 143);
             lblMusteriEmail.Name = "lblMusteriEmail";
             lblMusteriEmail.Size = new System.Drawing.Size(109, 19);
             lblMusteriEmail.TabIndex = 25;
@@ -99,7 +103,7 @@
             // 
             lblMusteriTelefon.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 162);
             lblMusteriTelefon.Appearance.Options.UseFont = true;
-            lblMusteriTelefon.Location = new System.Drawing.Point(12, 76);
+            lblMusteriTelefon.Location = new System.Drawing.Point(12, 111);
             lblMusteriTelefon.Name = "lblMusteriTelefon";
             lblMusteriTelefon.Size = new System.Drawing.Size(131, 19);
             lblMusteriTelefon.TabIndex = 24;
@@ -109,7 +113,7 @@
             // 
             lblMusteriSoyadi.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 162);
             lblMusteriSoyadi.Appearance.Options.UseFont = true;
-            lblMusteriSoyadi.Location = new System.Drawing.Point(12, 44);
+            lblMusteriSoyadi.Location = new System.Drawing.Point(12, 79);
             lblMusteriSoyadi.Name = "lblMusteriSoyadi";
             lblMusteriSoyadi.Size = new System.Drawing.Size(109, 19);
             lblMusteriSoyadi.TabIndex = 23;
@@ -119,17 +123,39 @@
             // 
             lblMusteriAdi.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 162);
             lblMusteriAdi.Appearance.Options.UseFont = true;
-            lblMusteriAdi.Location = new System.Drawing.Point(12, 12);
+            lblMusteriAdi.Location = new System.Drawing.Point(12, 47);
             lblMusteriAdi.Name = "lblMusteriAdi";
             lblMusteriAdi.Size = new System.Drawing.Size(86, 19);
             lblMusteriAdi.TabIndex = 22;
             lblMusteriAdi.Text = "Müşteri Adı:";
+            // 
+            // cboMusteriSeciniz
+            // 
+            cboMusteriSeciniz.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            cboMusteriSeciniz.FormattingEnabled = true;
+            cboMusteriSeciniz.Location = new System.Drawing.Point(149, 8);
+            cboMusteriSeciniz.Name = "cboMusteriSeciniz";
+            cboMusteriSeciniz.Size = new System.Drawing.Size(125, 23);
+            cboMusteriSeciniz.TabIndex = 32;
+            cboMusteriSeciniz.SelectedIndexChanged += cboMusteriSeciniz_SelectedIndexChanged;
+            // 
+            // lblMusteriSeciniz
+            // 
+            lblMusteriSeciniz.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 162);
+            lblMusteriSeciniz.Appearance.Options.UseFont = true;
+            lblMusteriSeciniz.Location = new System.Drawing.Point(12, 8);
+            lblMusteriSeciniz.Name = "lblMusteriSeciniz";
+            lblMusteriSeciniz.Size = new System.Drawing.Size(110, 19);
+            lblMusteriSeciniz.TabIndex = 31;
+            lblMusteriSeciniz.Text = "Müşteri Seçiniz:";
             // 
             // FormMusteriGuncelle
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(800, 450);
+            Controls.Add(cboMusteriSeciniz);
+            Controls.Add(lblMusteriSeciniz);
             Controls.Add(txtEmail);
             Controls.Add(txtTelefonNumarasi);
             Controls.Add(btnKaydet);
@@ -140,7 +166,8 @@
             Controls.Add(lblMusteriSoyadi);
             Controls.Add(lblMusteriAdi);
             Name = "FormMusteriGuncelle";
-            Text = "FormMusteriGuncelle";
+            Text = "Müşteri Düzenle";
+            Load += FormMusteriGuncelle_Load;
             ((System.ComponentModel.ISupportInitialize)txtEmail.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)txtTelefonNumarasi.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)txtMusteriSoyadi.Properties).EndInit();
@@ -160,5 +187,7 @@
         private DevExpress.XtraEditors.LabelControl lblMusteriTelefon;
         private DevExpress.XtraEditors.LabelControl lblMusteriSoyadi;
         private DevExpress.XtraEditors.LabelControl lblMusteriAdi;
+        private System.Windows.Forms.ComboBox cboMusteriSeciniz;
+        private DevExpress.XtraEditors.LabelControl lblMusteriSeciniz;
     }
 }

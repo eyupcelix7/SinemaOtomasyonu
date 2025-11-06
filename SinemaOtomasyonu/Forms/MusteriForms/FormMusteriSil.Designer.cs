@@ -41,6 +41,7 @@
             dgvMusteriler.Name = "dgvMusteriler";
             dgvMusteriler.Size = new System.Drawing.Size(800, 450);
             dgvMusteriler.TabIndex = 0;
+            dgvMusteriler.CellDoubleClick += dgvMusteriler_CellDoubleClick;
             // 
             // FormMusteriSil
             // 
@@ -49,7 +50,8 @@
             ClientSize = new System.Drawing.Size(800, 450);
             Controls.Add(dgvMusteriler);
             Name = "FormMusteriSil";
-            Text = "FormMusteriSil";
+            Text = "Müşteri Sil";
+            Load += FormMusteriSil_Load;
             ((System.ComponentModel.ISupportInitialize)dgvMusteriler).EndInit();
             ResumeLayout(false);
         }

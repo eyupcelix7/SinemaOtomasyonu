@@ -54,6 +54,7 @@
             btnKaydet.Size = new System.Drawing.Size(262, 36);
             btnKaydet.TabIndex = 17;
             btnKaydet.Text = "Kaydet";
+            btnKaydet.Click += btnKaydet_Click;
             // 
             // txtMusteriSoyadi
             // 
@@ -113,8 +114,8 @@
             // 
             txtTelefonNumarasi.Location = new System.Drawing.Point(149, 78);
             txtTelefonNumarasi.Name = "txtTelefonNumarasi";
-            txtTelefonNumarasi.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
-            txtTelefonNumarasi.Properties.MaskSettings.Set("mask", "(999) 999 99 99");
+            txtTelefonNumarasi.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegularMaskManager));
+            txtTelefonNumarasi.Properties.MaskSettings.Set("mask", "(\\d?\\d?\\d?) \\d\\d\\d-\\d\\d-\\d\\d");
             txtTelefonNumarasi.Size = new System.Drawing.Size(125, 20);
             txtTelefonNumarasi.TabIndex = 20;
             // 
@@ -140,7 +141,8 @@
             Controls.Add(lblMusteriSoyadi);
             Controls.Add(lblMusteriAdi);
             Name = "FormMusteriEkle";
-            Text = "FormMusteriEkle";
+            Text = "Müşteri Ekle";
+            Load += FormMusteriEkle_Load;
             ((System.ComponentModel.ISupportInitialize)txtMusteriSoyadi.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)txtMusteriAdi.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)txtTelefonNumarasi.Properties).EndInit();
