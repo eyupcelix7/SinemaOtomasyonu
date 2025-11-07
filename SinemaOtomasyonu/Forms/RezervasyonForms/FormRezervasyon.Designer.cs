@@ -32,15 +32,15 @@
             grpKoltuklar = new DevExpress.XtraEditors.GroupControl();
             flpKoltuklar = new System.Windows.Forms.FlowLayoutPanel();
             grpSeansBilgileri = new DevExpress.XtraEditors.GroupControl();
-            cboFilmSecin = new System.Windows.Forms.ComboBox();
-            lblFilmSecin = new DevExpress.XtraEditors.LabelControl();
-            lblMusteriSecin = new DevExpress.XtraEditors.LabelControl();
-            lblSecilenKoltuklar = new DevExpress.XtraEditors.LabelControl();
-            lblSecilenKoltuklarVal = new DevExpress.XtraEditors.LabelControl();
-            cboMusteriSecin = new System.Windows.Forms.ComboBox();
-            btnBiletKes = new DevExpress.XtraEditors.SimpleButton();
-            lblOdenecekTutar = new DevExpress.XtraEditors.LabelControl();
             lblOdenecekTutarVal = new DevExpress.XtraEditors.LabelControl();
+            lblOdenecekTutar = new DevExpress.XtraEditors.LabelControl();
+            btnBiletKes = new DevExpress.XtraEditors.SimpleButton();
+            cboMusteriSecin = new System.Windows.Forms.ComboBox();
+            lblSecilenKoltuklarVal = new DevExpress.XtraEditors.LabelControl();
+            lblSecilenKoltuklar = new DevExpress.XtraEditors.LabelControl();
+            lblMusteriSecin = new DevExpress.XtraEditors.LabelControl();
+            lblFilmSecin = new DevExpress.XtraEditors.LabelControl();
+            cboFilmSecin = new System.Windows.Forms.ComboBox();
             grpVizyondakiFilmler = new DevExpress.XtraEditors.GroupControl();
             flpVizyondakiFilmler = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)grpKoltuklar).BeginInit();
@@ -87,38 +87,44 @@
             grpSeansBilgileri.TabIndex = 1;
             grpSeansBilgileri.Text = "Seans Bilgileri";
             // 
-            // cboFilmSecin
+            // lblOdenecekTutarVal
             // 
-            cboFilmSecin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            cboFilmSecin.FormattingEnabled = true;
-            cboFilmSecin.Location = new System.Drawing.Point(105, 33);
-            cboFilmSecin.Name = "cboFilmSecin";
-            cboFilmSecin.Size = new System.Drawing.Size(121, 21);
-            cboFilmSecin.TabIndex = 0;
+            lblOdenecekTutarVal.Appearance.BorderColor = System.Drawing.Color.Black;
+            lblOdenecekTutarVal.Appearance.Options.UseBorderColor = true;
+            lblOdenecekTutarVal.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            lblOdenecekTutarVal.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            lblOdenecekTutarVal.Location = new System.Drawing.Point(105, 114);
+            lblOdenecekTutarVal.Name = "lblOdenecekTutarVal";
+            lblOdenecekTutarVal.Size = new System.Drawing.Size(121, 22);
+            lblOdenecekTutarVal.TabIndex = 10;
+            lblOdenecekTutarVal.Text = "0.00 TRY";
             // 
-            // lblFilmSecin
+            // lblOdenecekTutar
             // 
-            lblFilmSecin.Location = new System.Drawing.Point(5, 36);
-            lblFilmSecin.Name = "lblFilmSecin";
-            lblFilmSecin.Size = new System.Drawing.Size(50, 13);
-            lblFilmSecin.TabIndex = 1;
-            lblFilmSecin.Text = "Film Seçin:";
+            lblOdenecekTutar.Location = new System.Drawing.Point(2, 116);
+            lblOdenecekTutar.Name = "lblOdenecekTutar";
+            lblOdenecekTutar.Size = new System.Drawing.Size(81, 13);
+            lblOdenecekTutar.TabIndex = 8;
+            lblOdenecekTutar.Text = "Ödenecek Tutar:";
             // 
-            // lblMusteriSecin
+            // btnBiletKes
             // 
-            lblMusteriSecin.Location = new System.Drawing.Point(5, 63);
-            lblMusteriSecin.Name = "lblMusteriSecin";
-            lblMusteriSecin.Size = new System.Drawing.Size(67, 13);
-            lblMusteriSecin.TabIndex = 2;
-            lblMusteriSecin.Text = "Müşteri Seçin:";
+            btnBiletKes.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("btnBiletKes.ImageOptions.Image");
+            btnBiletKes.Location = new System.Drawing.Point(105, 142);
+            btnBiletKes.Name = "btnBiletKes";
+            btnBiletKes.Size = new System.Drawing.Size(121, 36);
+            btnBiletKes.TabIndex = 7;
+            btnBiletKes.Text = "Bileti Kes";
+            btnBiletKes.Click += btnBiletKes_Click;
             // 
-            // lblSecilenKoltuklar
+            // cboMusteriSecin
             // 
-            lblSecilenKoltuklar.Location = new System.Drawing.Point(2, 88);
-            lblSecilenKoltuklar.Name = "lblSecilenKoltuklar";
-            lblSecilenKoltuklar.Size = new System.Drawing.Size(81, 13);
-            lblSecilenKoltuklar.TabIndex = 3;
-            lblSecilenKoltuklar.Text = "Seçilen Koltuklar:";
+            cboMusteriSecin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            cboMusteriSecin.FormattingEnabled = true;
+            cboMusteriSecin.Location = new System.Drawing.Point(105, 60);
+            cboMusteriSecin.Name = "cboMusteriSecin";
+            cboMusteriSecin.Size = new System.Drawing.Size(121, 21);
+            cboMusteriSecin.TabIndex = 5;
             // 
             // lblSecilenKoltuklarVal
             // 
@@ -130,45 +136,39 @@
             lblSecilenKoltuklarVal.Name = "lblSecilenKoltuklarVal";
             lblSecilenKoltuklarVal.Size = new System.Drawing.Size(121, 22);
             lblSecilenKoltuklarVal.TabIndex = 4;
-            lblSecilenKoltuklarVal.Text = "1,2,3,4";
             // 
-            // cboMusteriSecin
+            // lblSecilenKoltuklar
             // 
-            cboMusteriSecin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            cboMusteriSecin.FormattingEnabled = true;
-            cboMusteriSecin.Location = new System.Drawing.Point(105, 60);
-            cboMusteriSecin.Name = "cboMusteriSecin";
-            cboMusteriSecin.Size = new System.Drawing.Size(121, 21);
-            cboMusteriSecin.TabIndex = 5;
+            lblSecilenKoltuklar.Location = new System.Drawing.Point(2, 88);
+            lblSecilenKoltuklar.Name = "lblSecilenKoltuklar";
+            lblSecilenKoltuklar.Size = new System.Drawing.Size(81, 13);
+            lblSecilenKoltuklar.TabIndex = 3;
+            lblSecilenKoltuklar.Text = "Seçilen Koltuklar:";
             // 
-            // btnBiletKes
+            // lblMusteriSecin
             // 
-            btnBiletKes.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("simpleButton1.ImageOptions.Image");
-            btnBiletKes.Location = new System.Drawing.Point(105, 142);
-            btnBiletKes.Name = "btnBiletKes";
-            btnBiletKes.Size = new System.Drawing.Size(121, 36);
-            btnBiletKes.TabIndex = 7;
-            btnBiletKes.Text = "Bileti Kes";
+            lblMusteriSecin.Location = new System.Drawing.Point(5, 63);
+            lblMusteriSecin.Name = "lblMusteriSecin";
+            lblMusteriSecin.Size = new System.Drawing.Size(67, 13);
+            lblMusteriSecin.TabIndex = 2;
+            lblMusteriSecin.Text = "Müşteri Seçin:";
             // 
-            // lblOdenecekTutar
+            // lblFilmSecin
             // 
-            lblOdenecekTutar.Location = new System.Drawing.Point(2, 116);
-            lblOdenecekTutar.Name = "lblOdenecekTutar";
-            lblOdenecekTutar.Size = new System.Drawing.Size(81, 13);
-            lblOdenecekTutar.TabIndex = 8;
-            lblOdenecekTutar.Text = "Ödenecek Tutar:";
+            lblFilmSecin.Location = new System.Drawing.Point(5, 36);
+            lblFilmSecin.Name = "lblFilmSecin";
+            lblFilmSecin.Size = new System.Drawing.Size(50, 13);
+            lblFilmSecin.TabIndex = 1;
+            lblFilmSecin.Text = "Film Seçin:";
             // 
-            // lblOdenecekTutarVal
+            // cboFilmSecin
             // 
-            lblOdenecekTutarVal.Appearance.BorderColor = System.Drawing.Color.Black;
-            lblOdenecekTutarVal.Appearance.Options.UseBorderColor = true;
-            lblOdenecekTutarVal.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            lblOdenecekTutarVal.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            lblOdenecekTutarVal.Location = new System.Drawing.Point(105, 114);
-            lblOdenecekTutarVal.Name = "lblOdenecekTutarVal";
-            lblOdenecekTutarVal.Size = new System.Drawing.Size(121, 22);
-            lblOdenecekTutarVal.TabIndex = 10;
-            lblOdenecekTutarVal.Text = "400 TRY";
+            cboFilmSecin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            cboFilmSecin.FormattingEnabled = true;
+            cboFilmSecin.Location = new System.Drawing.Point(105, 33);
+            cboFilmSecin.Name = "cboFilmSecin";
+            cboFilmSecin.Size = new System.Drawing.Size(121, 21);
+            cboFilmSecin.TabIndex = 0;
             // 
             // grpVizyondakiFilmler
             // 

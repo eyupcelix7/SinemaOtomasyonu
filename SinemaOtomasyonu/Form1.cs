@@ -3,6 +3,7 @@ using SinemaOtomasyonu.DataAccess.Services;
 using SinemaOtomasyonu.Entities.Models;
 using SinemaOtomasyonu.UI;
 using SinemaOtomasyonu.UI.Forms;
+using SinemaOtomasyonu.UI.Forms.KasaForms;
 using SinemaOtomasyonu.UI.Forms.MusteriForms;
 using SinemaOtomasyonu.UI.Forms.RezervasyonForms;
 using System;
@@ -103,6 +104,13 @@ namespace SinemaOtomasyonu
             form.MdiParent = this;
             form.Show();
 
+        }
+
+        private void btnKasaRaporlari_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FormKasaRaporlari form = new FormKasaRaporlari();
+            form.MdiParent = this;
+            form.Show();
         }
     }
 }

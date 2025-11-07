@@ -35,7 +35,7 @@
             btnFilmEkle = new DevExpress.XtraBars.BarButtonItem();
             btnFilmDuzenle = new DevExpress.XtraBars.BarButtonItem();
             btnFilmSil = new DevExpress.XtraBars.BarButtonItem();
-            barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
+            btnKasaRaporlari = new DevExpress.XtraBars.BarButtonItem();
             barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             btnMusterilerListele = new DevExpress.XtraBars.BarButtonItem();
@@ -60,7 +60,7 @@
             // ribbonControl1
             // 
             ribbonControl1.ExpandCollapseItem.Id = 0;
-            ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] { ribbonControl1.ExpandCollapseItem, btnFilmListele, btnFilmEkle, btnFilmDuzenle, btnFilmSil, barButtonItem5, barButtonItem6, barButtonItem7, btnMusterilerListele, btnMusterilerEkle, btnMusterilerSil, btnMusterilerDuzenle, btnKoltuklariGoster, btnRezervasyonYap });
+            ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] { ribbonControl1.ExpandCollapseItem, btnFilmListele, btnFilmEkle, btnFilmDuzenle, btnFilmSil, btnKasaRaporlari, barButtonItem6, barButtonItem7, btnMusterilerListele, btnMusterilerEkle, btnMusterilerSil, btnMusterilerDuzenle, btnKoltuklariGoster, btnRezervasyonYap });
             ribbonControl1.Location = new System.Drawing.Point(0, 0);
             ribbonControl1.MaxItemId = 14;
             ribbonControl1.Name = "ribbonControl1";
@@ -107,14 +107,15 @@
             btnFilmSil.Name = "btnFilmSil";
             btnFilmSil.ItemClick += btnFilmSil_ItemClick;
             // 
-            // barButtonItem5
+            // btnKasaRaporlari
             // 
-            barButtonItem5.Caption = "KASA RAPORLARI";
-            barButtonItem5.Id = 5;
-            barButtonItem5.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("barButtonItem5.ImageOptions.Image");
-            barButtonItem5.ImageOptions.LargeImage = (System.Drawing.Image)resources.GetObject("barButtonItem5.ImageOptions.LargeImage");
-            barButtonItem5.LargeWidth = 80;
-            barButtonItem5.Name = "barButtonItem5";
+            btnKasaRaporlari.Caption = "KASA RAPORLARI";
+            btnKasaRaporlari.Id = 5;
+            btnKasaRaporlari.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("barButtonItem5.ImageOptions.Image");
+            btnKasaRaporlari.ImageOptions.LargeImage = (System.Drawing.Image)resources.GetObject("barButtonItem5.ImageOptions.LargeImage");
+            btnKasaRaporlari.LargeWidth = 80;
+            btnKasaRaporlari.Name = "btnKasaRaporlari";
+            btnKasaRaporlari.ItemClick += btnKasaRaporlari_ItemClick;
             // 
             // barButtonItem6
             // 
@@ -181,7 +182,7 @@
             // 
             btnRezervasyonYap.Caption = "REZERVASYON YAP";
             btnRezervasyonYap.Id = 13;
-            btnRezervasyonYap.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("barButtonItem13.ImageOptions.SvgImage");
+            btnRezervasyonYap.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btnRezervasyonYap.ImageOptions.SvgImage");
             btnRezervasyonYap.LargeWidth = 80;
             btnRezervasyonYap.Name = "btnRezervasyonYap";
             btnRezervasyonYap.ItemClick += btnRezervasyonYap_ItemClick;
@@ -211,7 +212,7 @@
             // 
             // ribbonPageGroup5
             // 
-            ribbonPageGroup5.ItemLinks.Add(barButtonItem5);
+            ribbonPageGroup5.ItemLinks.Add(btnKasaRaporlari);
             ribbonPageGroup5.ItemLinks.Add(barButtonItem6);
             ribbonPageGroup5.ItemLinks.Add(barButtonItem7);
             ribbonPageGroup5.Name = "ribbonPageGroup5";
@@ -279,7 +280,7 @@
         private DevExpress.XtraBars.BarButtonItem btnFilmSil;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem5;
+        private DevExpress.XtraBars.BarButtonItem btnKasaRaporlari;
         private DevExpress.XtraBars.BarButtonItem barButtonItem6;
         private DevExpress.XtraBars.BarButtonItem barButtonItem7;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
