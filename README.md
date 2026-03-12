@@ -1,1 +1,1 @@
-**Udemy - Görkemli Yazılım**
+**Katmanlı mimari ile sinema otomasyonu.**
